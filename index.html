@@ -46,13 +46,11 @@
       padding-left: 20px;
     }
     .audio-box {
-      display: inline-block;
-      width: 100px;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       margin-right: 10px;
       padding: 5px;
-      border: 1px solid #ddd; /* Border between samples */
-      border-radius: 5px;
       box-sizing: border-box;
       font-size: 0.8em; /* Smaller font size */
     }
@@ -61,6 +59,7 @@
     }
     audio {
       width: 100%; /* Ensures the audio player fits inside the box */
+      margin-top: 5px; /* Space between text and audio player */
     }
     hr {
       border: 1px solid #ddd;
