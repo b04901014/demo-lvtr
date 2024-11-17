@@ -7,21 +7,14 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      padding: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       margin: 0;
       background-color: #f5f5f5;
+      padding: 20px;
     }
     .comparison-container {
-      width: 80%;
-      max-width: 1200px;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
     }
     .comparison-table {
       width: 100%;
@@ -33,46 +26,54 @@
     }
     .method-name {
       display: table-cell;
-      width: 120px;
+      width: 140px; /* Adjusted for inline titles */
       font-weight: bold;
       font-size: 1em;
       padding: 10px;
       vertical-align: middle;
       text-align: right;
-      border-right: 1px solid #ccc;
+      white-space: nowrap; /* Prevents line breaks */
+      text-align: left;
     }
     .audio-container {
       display: table-cell;
       padding-left: 20px;
       text-align: center;
+      white-space: nowrap; /* Prevent wrapping for side-by-side alignment */
+      overflow-x: auto;
     }
     .audio-box {
-      display: inline-flex; /* Horizontally align the boxes */
-      flex-direction: column;
-      align-items: center;
+      display: inline-block;
       margin-right: 10px;
       padding: 5px;
-      font-size: 0.8em; /* Smaller font size */
+      font-size: 0.8em;
+      text-align: center;
     }
-    .audio-box + .audio-box {
-      margin-left: 10px;
+    .audio-box h4 {
+      display: none;
     }
     audio {
-      width: 200px; /* Ensures the audio player fits inside the box */
-      margin-top: 5px; /* Space between text and audio player */
+      width: 250px;
+      margin-top: 5px;
     }
     hr {
       border: 1px solid #ddd;
       margin: 20px 0;
+      width: 100%; /* Ensure the <hr> spans across the entire width */
+      border-top: 1px solid #ddd; /* Adjusts the appearance */
     }
-    h1 {
-      text-align: center;
-      color: #333;
+    h1, p {
+      text-align: left; /* Changed to left-align */
+      margin-left: 20px;
     }
     footer {
       text-align: center;
       margin-top: 30px;
       color: #777;
+    }
+    /* Show sample labels only in the first row */
+    .method-row:first-child .audio-box h4 {
+      display: block;
     }
   </style>
 </head>
@@ -80,7 +81,7 @@
 
   <div class="comparison-container">
     <h1>Audio Comparison Demo</h1>
-    <p style="text-align: center;">Compare synthesized audio samples side by side for different methods:</p>
+    <p style="text-align: left;">Compare synthesized audio samples side by side for different methods:</p>
 
     <div class="comparison-table">
 
@@ -100,7 +101,6 @@
         </div>
       </div>
 
-      <hr>
 
       <!-- Token-LM Row -->
       <div class="method-row">
@@ -118,7 +118,6 @@
         </div>
       </div>
 
-      <hr>
 
       <!-- Token-LM + Pitch Row -->
       <div class="method-row">
@@ -136,8 +135,6 @@
         </div>
       </div>
 
-      <hr>
-
       <!-- Proposed Row -->
       <div class="method-row">
         <div class="method-name">Proposed</div>
@@ -153,8 +150,6 @@
           <div class="audio-box"><h4>Sample 8</h4><audio controls><source src="proposed-sample8.wav" type="audio/wav">Your browser does not support the audio element.</audio></div>
         </div>
       </div>
-
-      <hr>
 
       <!-- Ground Truth Row -->
       <div class="method-row">
