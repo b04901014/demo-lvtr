@@ -10,6 +10,14 @@
       text-align: center;
       padding: 20px;
     }
+    .method-section {
+      margin-bottom: 40px;
+    }
+    .method-title {
+      margin-bottom: 20px;
+      font-size: 1.5em;
+      color: #333;
+    }
     .audio-container {
       display: flex;
       justify-content: center;
@@ -20,31 +28,144 @@
       border: 1px solid #ccc;
       padding: 10px;
       border-radius: 5px;
-      width: 300px;
+      width: 150px;
     }
-    h2 {
+    h1 {
       color: #333;
+    }
+    footer {
+      margin-top: 20px;
+      color: #777;
     }
   </style>
 </head>
 <body>
   <h1>Audio Comparison Demo</h1>
-  <p>Compare synthesized audio clips side by side:</p>
+  <p>Compare synthesized audio samples from different methods side by side:</p>
 
-  <div class="audio-container">
-    <div class="audio-box">
-      <h2>Audio 1</h2>
-      <audio controls>
-        <source src="audio1.wav" type="audio/wav">
-        Your browser does not support the audio element.
-      </audio>
+  <!-- Token-LM Section -->
+  <div class="method-section">
+    <div class="method-title">Token-LM</div>
+    <div class="audio-container">
+      <div class="audio-box">
+        <h3>Sample 1</h3>
+        <audio controls>
+          <source src="token-lm-sample1.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="audio-box">
+        <h3>Sample 2</h3>
+        <audio controls>
+          <source src="token-lm-sample2.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="audio-box">
+        <h3>Sample 3</h3>
+        <audio controls>
+          <source src="token-lm-sample3.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="audio-box">
+        <h3>Sample 4</h3>
+        <audio controls>
+          <source src="token-lm-sample4.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="audio-box">
+        <h3>Sample 5</h3>
+        <audio controls>
+          <source src="token-lm-sample5.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
     </div>
-    <div class="audio-box">
-      <h2>Audio 2</h2>
-      <audio controls>
-        <source src="audio2.wav" type="audio/wav">
-        Your browser does not support the audio element.
-      </audio>
+  </div>
+
+  <!-- Token-LM + Pitch Section -->
+  <div class="method-section">
+    <div class="method-title">Token-LM + Pitch</div>
+    <div class="audio-container">
+      <div class="audio-box">
+        <h3>Sample 1</h3>
+        <audio controls>
+          <source src="token-lm-pitch-sample1.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="audio-box">
+        <h3>Sample 2</h3>
+        <audio controls>
+          <source src="token-lm-pitch-sample2.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="audio-box">
+        <h3>Sample 3</h3>
+        <audio controls>
+          <source src="token-lm-pitch-sample3.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="audio-box">
+        <h3>Sample 4</h3>
+        <audio controls>
+          <source src="token-lm-pitch-sample4.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="audio-box">
+        <h3>Sample 5</h3>
+        <audio controls>
+          <source src="token-lm-pitch-sample5.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+  </div>
+
+  <!-- Proposed Section -->
+  <div class="method-section">
+    <div class="method-title">Proposed</div>
+    <div class="audio-container">
+      <div class="audio-box">
+        <h3>Sample 1</h3>
+        <audio controls>
+          <source src="proposed-sample1.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="audio-box">
+        <h3>Sample 2</h3>
+        <audio controls>
+          <source src="proposed-sample2.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="audio-box">
+        <h3>Sample 3</h3>
+        <audio controls>
+          <source src="proposed-sample3.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="audio-box">
+        <h3>Sample 4</h3>
+        <audio controls>
+          <source src="proposed-sample4.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="audio-box">
+        <h3>Sample 5</h3>
+        <audio controls>
+          <source src="proposed-sample5.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
     </div>
   </div>
 
